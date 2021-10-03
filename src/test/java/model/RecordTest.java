@@ -1,5 +1,5 @@
 package model;
 
-public class Record {
+public class RecordTest {
     private int distanceRecord = 0;
 }
