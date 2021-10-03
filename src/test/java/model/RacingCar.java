@@ -11,5 +11,6 @@ class RacingCar {
     void verifyNameSize() {
         boolean result = RacingCar.verifySize();
         assertThat(result).isTrue();
+        //ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁ
     }
 }
