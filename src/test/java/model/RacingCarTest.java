@@ -10,7 +10,7 @@ class RacingCarTest {
     private RacingCar racingCar;
 
     @ParameterizedTest
-    @CsvSource(value = {"tom,devin,kate,coco,andy"})
+    @CsvSource(value = {"tom","devin","kate","coco","andy"})
     @DisplayName("자동차 이름을 제대로 반환하는지 확인")
     void getCarName(String value) {
         RacingCar racingCar = new RacingCar(value);
