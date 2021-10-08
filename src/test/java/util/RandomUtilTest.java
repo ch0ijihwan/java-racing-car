@@ -12,11 +12,13 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 import static util.RandomUtil.generateRandomNumber;
 
 class RandomUtilTest {
+    private static final int TWO_RANDOM_RANGES = 2;
+
     @ParameterizedTest
     @MethodSource("randomUtilParameterProvider")
     @DisplayName("0 혹은 1인 랜덤 수를 반환하는지 확인")
     void generateRandom() {
-        assertThat(generateRandomNumber()).isNotNegative().isLessThan(2);
+        assertThat(generateRandomNumber()).isNotNegative().isLessThan(TWO_RANDOM_RANGES);
     }
 
     static Stream<Arguments> randomUtilParameterProvider() {
