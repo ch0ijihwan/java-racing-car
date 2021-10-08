@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class RandomUtil {
 
+    private static final int TWO_RANDOM_RANGES = 2;
+
     private RandomUtil() {
 
     }
@@ -11,6 +13,6 @@ public class RandomUtil {
     private static final Random RANDOM = new Random();
 
     public static int generateRandomNumber() {
-        return RANDOM.nextInt(2);
+        return RANDOM.nextInt(TWO_RANDOM_RANGES);
     }
 }
