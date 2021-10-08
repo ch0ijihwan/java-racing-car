@@ -1,11 +1,10 @@
 package model;
 
-import java.util.Random;
+import util.RandomUtil;
 
 public class Distance {
-    private static final  Random RANDOM = new Random();
 
     public int makeZeroOrOneStep() {
-        return RANDOM.nextInt(2);
+        return RandomUtil.generateRandomNumber();
     }
 }
