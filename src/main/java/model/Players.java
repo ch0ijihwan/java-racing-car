@@ -1,13 +1,11 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Players {
-    private String[] playersNames;
-    private List<RacingCar> playerRoster = new ArrayList<>();
+    private final List<RacingCar> playerRoster;
 
     public Players(String[] inputPlayers) {
         Arrays.stream(inputPlayers)
@@ -16,7 +14,6 @@ public class Players {
         playerRoster = Arrays.stream(inputPlayers)
                 .map(RacingCar::new)
                 .collect(Collectors.toList());
-
     }
 
     public List<RacingCar> getPlayerRoster() {
