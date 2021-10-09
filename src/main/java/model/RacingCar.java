@@ -9,6 +9,15 @@ public class RacingCar {
         this.record = 0;
     }
 
+    public RacingCar(String value, int record) {
+        this.carName = value;
+        this.record = 0;
+    }
+
+    public int getCarRecode(){
+        return record;
+    }
+
     public String getCarName() {
         return this.carName;
     }
