@@ -20,18 +20,12 @@ class PlayersTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"tom","devin","kate","coco","andy"})
-    @DisplayName("자동차의 이름이 5자리 이하인 경우 true를 반환하는지 확인")
-    void verifyNameSize(String value) {
-       assertThat(Players.verifyNameSize(value)).isTrue();
-    }
-
-    @ParameterizedTest
     @CsvSource(value = {"tomsss","devins","katess","cocsso","andyss"})
     @DisplayName("자동차의 이름이 5자리를 초과한 경우 예외처리를 반환하는지 확인")
     void verifyNameSize2(String value) {
+        String [] tokens = value.split(",");
         assertThatIllegalStateException()
-                .isThrownBy(() -> verifyNameSize(value))
+                .isThrownBy(() -> players = new Players(tokens))
                 .withMessage("입력된 이름의 길이가 5보다 깁니다.");
     }
 }
