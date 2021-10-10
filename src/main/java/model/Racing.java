@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Racing {
-    private String[] winnersNames;
     private final List<RacingCar> racingCars = new ArrayList<>();
-    public Boolean isExistWinners;
 
     public Racing(List<RacingCar> racingCars) {
         moveAllRacingcars();
@@ -17,7 +15,7 @@ public class Racing {
         return racingCars;
     }
 
-    public String[] getWinner() {
-        return winnersNames;
+    public List<RacingCar> getRacingcarRouter() {
+        return this.racingCars;
     }
 }
