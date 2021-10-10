@@ -1,12 +1,12 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Racing {
-    private final List<RacingCar> racingCars = new ArrayList<>();
+    private List<RacingCar> racingCars;
 
     public Racing(List<RacingCar> racingCars) {
+        this.racingCars = racingCars;
         moveAllRacingcars();
     }
 
@@ -16,6 +16,6 @@ public class Racing {
     }
 
     public List<RacingCar> getRacingcarRouter() {
-        return this.racingCars;
+        return racingCars;
     }
 }
