@@ -16,6 +16,10 @@ public class Players {
                 .map(RacingCar::new)
                 .collect(Collectors.toList());
     }
+    public Players(List<RacingCar> playerRoster) {
+       this.playerRoster = playerRoster;
+    }
+
 
     public List<RacingCar> getPlayerRoster() {
         return playerRoster;
