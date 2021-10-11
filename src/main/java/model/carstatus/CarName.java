@@ -10,8 +10,7 @@ public class CarName {
         isBlank(carName);
         this.carName = carName;
     }
-
-    public String getCarName() {
+    public String value() {
         return carName;
     }
 
@@ -26,4 +25,6 @@ public class CarName {
             throw new IllegalArgumentException("이름의 길이가 0입니다.");
         }
     }
+
+
 }
