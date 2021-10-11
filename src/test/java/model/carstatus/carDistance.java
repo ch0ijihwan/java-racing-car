@@ -1,4 +1,4 @@
 package model.carstatus;
 
-public class carDistance {
+public class CarDistance {
 }
