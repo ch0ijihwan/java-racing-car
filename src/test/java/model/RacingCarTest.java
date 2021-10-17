@@ -50,4 +50,19 @@ class RacingCarTest {
                 () -> assertThat(actualCarDistance).isEqualTo(expectDistance)
         );
     }
+
+    @Test
+    @DisplayName("두 RaicingCar가 가진 Distance(거리)를 비교하여, 값이 같은경우 true을 반환한디.")
+    void equalsCarDistance()
+    {
+        //given
+        RacingCar racingCar = new RacingCar("a",1);
+        RacingCar anotherRacingcar = new RacingCar("b",1);
+
+        //when
+        Boolean actual = racingCar.equalsDistance(anotherRacingcar);
+
+        //then
+        assertThat(actual).isTrue();
+    }
 }
