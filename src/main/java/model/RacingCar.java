@@ -1,31 +1,43 @@
 package model;
 
+import model.movement.RandomMovement;
+import model.vo.Distance;
+import model.vo.Name;
+
 import java.util.Objects;
 
-public class RacingCar {//TODO 두번째 생성자 삭제 고려
-    private final String carName;
-    private int record;
+public class RacingCar {
+    private static final int ONE_MOVEMENT = 1;
+    private final Name carName;
+    private Distance distance;
 
     public RacingCar(String value) {
-        this.carName = value;
-        this.record = 0;
+
+        this.carName = new Name(value);
+        this.distance = new Distance();
     }
 
-    public RacingCar(String value, int record) {
-        this.carName = value;
-        this.record = 0;
+    public RacingCar(String name, int distance) {
+        this.carName = new Name(name);
+        this.distance = new Distance(distance);
     }
 
-    public void move(){
-        this.record = this.record + Distance.makeZeroOrOneStep();
+    public void move() {
+        if (Boolean.TRUE.equals(new RandomMovement().generateMovement())) {
+            distance.update(ONE_MOVEMENT);
+        }
     }
 
-    public int getCarRecode(){
-        return this.record;
+    public int getCarRecode() {
+        return this.distance.value();
     }
 
     public String getCarName() {
-        return this.carName;
+        return carName.value();
+    }
+
+    public Boolean equalsDistance(RacingCar racingCar){
+        return this.distance.equals(racingCar.distance);
     }
 
     @Override
@@ -33,11 +45,11 @@ public class RacingCar {//TODO 두번째 생성자 삭제 고려
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RacingCar racingCar = (RacingCar) o;
-        return Objects.equals(carName, racingCar.carName);
+        return Objects.equals(carName, racingCar.carName) && Objects.equals(distance, racingCar.distance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(carName, record);
+        return Objects.hash(carName, distance);
     }
 }
