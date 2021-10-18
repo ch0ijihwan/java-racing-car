@@ -21,7 +21,7 @@ class RacingCarTest {
         //when
         racingCar = new RacingCar(inputName, inputDistance);
         String actualCarName = racingCar.getCarName();
-        int actualCarDistance = racingCar.getCarRecode();
+        int actualCarDistance = racingCar.getCarDistance();
 
         //then
         assertAll(
@@ -53,7 +53,7 @@ class RacingCarTest {
 
         //when
          racingCar.move(true);
-         int actualDistance = racingCar.getCarRecode();
+         int actualDistance = racingCar.getCarDistance();
         //then
         assertThat(actualDistance).isEqualTo(expectDistance);
     }

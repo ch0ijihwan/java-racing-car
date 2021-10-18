@@ -25,7 +25,7 @@ public class RacingCar {
         }
     }
 
-    public int getCarRecode() {
+    public int getCarDistance() {
         return this.distance.value();
     }
 

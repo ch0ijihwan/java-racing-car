@@ -31,7 +31,7 @@ public class Referee {
 
     private List<RacingCar> sortCars(List<RacingCar> racingCars) {
         return racingCars.stream()
-                .sorted(Comparator.comparing(RacingCar::getCarRecode))
+                .sorted(Comparator.comparing(RacingCar::getCarDistance))
                 .collect(Collectors.toUnmodifiableList());
     }
 }

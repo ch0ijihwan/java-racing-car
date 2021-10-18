@@ -24,7 +24,7 @@ public class StatusDisplay {
     public static void showGameStatus(List<RacingCar> racingCars) {
         IntStream.range(0, racingCars.size())
                 .forEach(index -> System.out.println(racingCars.get(index).getCarName() + " : "
-                        + "- ".repeat(racingCars.get(index).getCarRecode())));
+                        + "- ".repeat(racingCars.get(index).getCarDistance())));
         System.out.println();
 
     }
