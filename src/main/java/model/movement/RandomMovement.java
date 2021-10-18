@@ -3,10 +3,10 @@ package model.movement;
 import java.util.Random;
 
 public class RandomMovement implements MovementStrategy {
-    private static final Random RANDOM = new Random();
+    private final Random RANDOM = new Random();
 
     @Override
-    public Boolean generateMovement() {
+    public boolean generateMovement() {
         return RANDOM.nextBoolean();
     }
 }
