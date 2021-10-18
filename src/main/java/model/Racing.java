@@ -1,17 +1,17 @@
 package model;
 
 public class Racing {
-    private Racingcars racingCars;
+    private final Racingcars racingCars;
 
-    public Racing(Racingcars racingCars) {
-        this.racingCars = racingCars;
-    }
-
-    public void moveAllRacingcars() {
-        racingCars = racingCars.moveCars();
+    public Racing(String[] names) {
+        this.racingCars = new Racingcars(names);
     }
 
     public Racingcars getRacingCars() {
         return racingCars;
+    }
+
+    public void move(){
+        racingCars.race();
     }
 }
