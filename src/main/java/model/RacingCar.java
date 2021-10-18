@@ -1,6 +1,5 @@
 package model;
 
-import model.movement.RandomMovement;
 import model.vo.Distance;
 import model.vo.Name;
 
@@ -9,21 +8,19 @@ import java.util.Objects;
 public class RacingCar {
     private static final int ONE_MOVEMENT = 1;
     private final Name carName;
-    private Distance distance;
-
-    public RacingCar(String value) {
-
-        this.carName = new Name(value);
-        this.distance = new Distance();
-    }
+    private final Distance distance;
 
     public RacingCar(String name, int distance) {
         this.carName = new Name(name);
         this.distance = new Distance(distance);
     }
 
-    public void move() {
-        if (Boolean.TRUE.equals(new RandomMovement().generateMovement())) {
+    public RacingCar(String value) {
+        this(value, 0);
+    }
+
+    public void move(boolean isMove) {
+        if (isMove) {
             distance.update(ONE_MOVEMENT);
         }
     }
@@ -36,7 +33,7 @@ public class RacingCar {
         return carName.value();
     }
 
-    public Boolean equalsDistance(RacingCar racingCar){
+    public boolean equalsDistance(RacingCar racingCar){
         return this.distance.equals(racingCar.distance);
     }
 
