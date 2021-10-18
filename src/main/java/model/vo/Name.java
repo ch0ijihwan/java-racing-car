@@ -5,16 +5,12 @@ import java.util.Objects;
 public class Name {
     private static final int MAX_CAR_NAME_LENGTH = 5;
     private static final int MIN_CAR_NAME_LENGTH = 0;
-    String carName;
+    private final String carName;
 
     public Name(String carName) {
         verifyNameSize(carName);
         isBlank(carName);
         this.carName = carName;
-    }
-
-    public String value() {
-        return carName;
     }
 
     private void verifyNameSize(String value) {
@@ -27,6 +23,10 @@ public class Name {
         if (value.length() == MIN_CAR_NAME_LENGTH) {
             throw new IllegalArgumentException("이름의 길이가 0입니다.");
         }
+    }
+
+    public String value() {
+        return carName;
     }
 
     @Override
