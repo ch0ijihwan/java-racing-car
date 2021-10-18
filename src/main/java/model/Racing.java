@@ -1,21 +1,17 @@
 package model;
 
-import java.util.List;
-
 public class Racing {
-    private List<RacingCar> racingCars;
+    private Racingcars racingCars;
 
-    public Racing(List<RacingCar> racingCars) {
+    public Racing(Racingcars racingCars) {
         this.racingCars = racingCars;
-        moveAllRacingcars();
     }
 
-    public List<RacingCar> moveAllRacingcars() {
-        this.racingCars.forEach(RacingCar::move);
-        return racingCars;
+    public void moveAllRacingcars() {
+        racingCars = racingCars.moveCars();
     }
 
-    public List<RacingCar> getRacingcarRouter() {
+    public Racingcars getRacingCars() {
         return racingCars;
     }
 }
