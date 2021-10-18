@@ -1,4 +1,4 @@
-package model;
+package model.car;
 
 import model.vo.Distance;
 import model.vo.Name;

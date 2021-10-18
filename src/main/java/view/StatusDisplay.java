@@ -1,6 +1,6 @@
 package view;
 
-import model.RacingCar;
+import model.car.RacingCar;
 
 import java.util.List;
 import java.util.stream.IntStream;

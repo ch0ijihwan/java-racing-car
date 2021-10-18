@@ -1,5 +1,7 @@
 package model;
 
+import model.car.Racingcars;
+
 public class Racing {
     private final Racingcars racingCars;
 
