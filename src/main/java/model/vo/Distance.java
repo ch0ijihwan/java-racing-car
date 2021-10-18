@@ -3,13 +3,10 @@ package model.vo;
 import java.util.Objects;
 
 public class Distance {
-    private static final int NOT_MOVE = 0;
     private int value;
-    private boolean moving;
 
     public Distance() {
-        this.value = NOT_MOVE;
-        moving = false;
+        this.value = 0;
     }
 
     public Distance(int value) {
@@ -29,11 +26,11 @@ public class Distance {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Distance distance = (Distance) o;
-        return value == distance.value && moving == distance.moving;
+        return value == distance.value;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value, moving);
+        return Objects.hash(value);
     }
 }
