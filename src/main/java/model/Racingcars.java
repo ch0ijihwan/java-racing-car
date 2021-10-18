@@ -4,6 +4,7 @@ import model.movement.RandomMovement;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Racingcars {
@@ -21,5 +22,18 @@ public class Racingcars {
 
     public void race() {
         cars.forEach(car -> car.move(new RandomMovement().generateMovement()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Racingcars that = (Racingcars) o;
+        return Objects.equals(cars, that.cars);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cars);
     }
 }
