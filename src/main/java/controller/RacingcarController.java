@@ -13,7 +13,7 @@ public class RacingcarController {
         StatusDisplay.showInputNams();
         this.racing = new Racing(Input.inputRacingcarNames());
         StatusDisplay.showInputNumberOfAttempts();
-        this.numberOfAttempts = Input.inputFinishLine();
+        this.numberOfAttempts = Input.inputNumberAttempts();
     }
 
     public void run() {

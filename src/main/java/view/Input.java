@@ -13,7 +13,7 @@ public class Input {
                 .split(",");
     }
 
-    public static int inputFinishLine() {
+    public static int inputNumberAttempts() {
         return SCANNER.nextInt();
     }
 }
