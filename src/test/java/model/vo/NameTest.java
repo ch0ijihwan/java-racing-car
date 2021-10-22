@@ -20,9 +20,9 @@ class NameTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"tom,tom", "cici,cici","a,a"})
+    @CsvSource(value = {"tom,tom", "cici,cici", "a,a"})
     @DisplayName("자동차 이름을 반환하는지 확인하는 테스트")
-    void getCarName(String Name, String expect){
+    void getCarName(String Name, String expect) {
         //given
         Name name = new Name(Name);
 
