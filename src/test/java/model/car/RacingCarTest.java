@@ -62,10 +62,10 @@ class RacingCarTest {
     @DisplayName("해시 코드에 대한 테스트 코드")
     void hash() {
         RacingCar racingCar = new RacingCar("a", 1);
-        RacingCar otherRacinCar = new RacingCar("a", 1);
+        RacingCar otherRacingCar = new RacingCar("a", 1);
 
         int hashCode = racingCar.hashCode();
-        int otherHashCode = otherRacinCar.hashCode();
+        int otherHashCode = otherRacingCar.hashCode();
         boolean actual = hashCode == otherHashCode;
         assertThat(actual).isTrue();
     }
