@@ -52,9 +52,21 @@ class RacingCarTest {
         int expectDistance = 2;
 
         //when
-         racingCar.move(true);
-         int actualDistance = racingCar.getCarDistance();
+        racingCar.move(true);
+        int actualDistance = racingCar.getCarDistance();
         //then
         assertThat(actualDistance).isEqualTo(expectDistance);
+    }
+
+    @Test
+    @DisplayName("해시 코드에 대한 테스트 코드")
+    void hash() {
+        RacingCar racingCar = new RacingCar("a", 1);
+        RacingCar otherRacinCar = new RacingCar("a", 1);
+
+        int hashCode = racingCar.hashCode();
+        int otherHashCode = otherRacinCar.hashCode();
+        boolean actual = hashCode == otherHashCode;
+        assertThat(actual).isTrue();
     }
 }
