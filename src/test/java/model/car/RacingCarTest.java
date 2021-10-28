@@ -61,12 +61,16 @@ class RacingCarTest {
     @Test
     @DisplayName("같은 이름과 거리를 가진 객체의 해시 코드에 대한 테스트 코드")
     void hash() {
+        //given
         RacingCar racingCar = new RacingCar("a", 1);
         RacingCar otherRacingCar = new RacingCar("a", 1);
 
+        //when
         int hashCode = racingCar.hashCode();
         int otherHashCode = otherRacingCar.hashCode();
         boolean actual = hashCode == otherHashCode;
+
+        //then
         assertThat(actual).isTrue();
     }
 }
