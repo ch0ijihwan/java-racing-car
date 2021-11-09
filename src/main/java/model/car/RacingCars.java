@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class Racingcars {
+public class RacingCars {
+
     private final List<RacingCar> cars;
 
-    public Racingcars(String[] inputPlayers) {
+    public RacingCars(String[] inputPlayers) {
         cars = Arrays.stream(inputPlayers)
                 .map(RacingCar::new)
                 .collect(Collectors.toList());
@@ -28,7 +29,7 @@ public class Racingcars {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Racingcars that = (Racingcars) o;
+        RacingCars that = (RacingCars) o;
         return Objects.equals(cars, that.cars);
     }
 
